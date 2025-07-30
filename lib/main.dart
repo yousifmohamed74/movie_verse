@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movie_verse/core/Api/dio_factory.dart';
 import 'package:movie_verse/core/styles/theme_data.dart';
 import 'package:movie_verse/features/splash%20screen/ui/splash_screen.dart';
 
-void main() {
-  DioFactory.init();
+void main() { 
   runApp(const MyApp());
 }
 

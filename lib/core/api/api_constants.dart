@@ -5,8 +5,8 @@ class ApiConstants {
   static const String imagebaseUrl ="https://image.tmdb.org/t/p/w500/";
   static const String trending = "/trending/movie/day";
   static const String nowplaying = '/movie/now_playing';
-  static const String top_rated = '/movie/top_rated';
-  static const String Upcoming = "/movie/upcoming";
+  static const String toprated = '/movie/top_rated';
+  static const String upcoming = "/movie/upcoming";
   static const String movisearch = "/movie/";
   
 
