@@ -30,8 +30,8 @@ class HomescreenProvider extends ChangeNotifier{
         path: ApiConstants.nowplaying,
       );
       final data=NowPlayingResponseModel.fromJson(response.data);
-      trendingmovies.clear();
-      trendingmovies.addAll(data.results);
+      nowplayingmovies.clear();
+      nowplayingmovies.addAll(data.results);
       nowplayingmoviesdates.clear();
       nowplayingmoviesdates.addAll(data.dates);
       notifyListeners();

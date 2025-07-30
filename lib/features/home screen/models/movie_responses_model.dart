@@ -16,7 +16,7 @@ class TrendingResponseModel{
 }
 
 class NowPlayingResponseModel{
-  Map<String,String> dates;
+  Map dates;
   int page;
   List <MovieModel> results; 
   int totlapages;  
@@ -54,7 +54,7 @@ class TopRatedResponseModel{
 
 
 class UpcomingResponseModel{
-  Map<String,String> dates;
+  Map dates;
   int page;
   List <MovieModel> results; 
   int totalpages;  

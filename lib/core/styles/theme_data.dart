@@ -83,6 +83,7 @@ class Themedata {
         color: Colors.white,            
       ),
       color: SemiDarkThemeColors.backgroundColor,
+      
                 
     ),
     floatingActionButtonTheme:const FloatingActionButtonThemeData(
