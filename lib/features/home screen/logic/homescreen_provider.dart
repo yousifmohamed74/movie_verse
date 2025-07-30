@@ -1,7 +1,7 @@
 
 import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:movie_verse/core/Api/api_constants.dart';
+import 'package:movie_verse/core/api/api_constants.dart';
 import 'package:movie_verse/core/api/dio_factory.dart';
 import 'package:movie_verse/features/home%20screen/models/movie_responses_model.dart';
 
@@ -45,7 +45,7 @@ class HomescreenProvider extends ChangeNotifier{
   void getTopRatedMovies()async{
     try{
       final response=await DioFactory.getData(
-        path: ApiConstants.top_rated,
+        path: ApiConstants.toprated,
       );
       final data=TopRatedResponseModel.fromJson(response.data);
       topratedmovies.clear();
@@ -64,7 +64,7 @@ class HomescreenProvider extends ChangeNotifier{
   void getUpcomingMovies()async{
     try{
       final response=await DioFactory.getData(
-        path: ApiConstants.Upcoming,
+        path: ApiConstants.upcoming,
       );
       final data=UpcomingResponseModel.fromJson(response.data);
       upcomingmovies.clear();

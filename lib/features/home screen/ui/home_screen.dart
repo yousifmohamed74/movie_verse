@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_verse/features/home%20screen/logic/homescreen_provider.dart';
+import 'package:movie_verse/features/home%20screen/ui/widgets/movie_shape1_wid.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -43,10 +44,43 @@ class HomeScreen extends StatelessWidget {
             return SafeArea(
               child: Padding(
                 padding: const EdgeInsets.all(15),
-                child: Column(
-                  children: [
-                    Text("data"),
-                  ],
+                child: SingleChildScrollView(
+                  child: Column(
+                    spacing: 20,
+                    children: [
+                      //1
+                      Column(
+                        spacing: 15,
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Text("Trending Movies",style: TextStyle(
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.w600
+                                ),),
+                              ),
+                              Icon(Icons.arrow_forward_ios,size: 20,),                          
+                            ],
+                          ),
+                          SizedBox(
+                            height: 200,
+                            child: ListView.separated(                          
+                              scrollDirection: Axis.horizontal,
+                              shrinkWrap: true,                      
+                              separatorBuilder: (context, index) => SizedBox(width: 15,), 
+                              itemCount: provider.trendingmovies.length,
+                              itemBuilder: (context, index) =>MovieShape1Wid(movie: provider.trendingmovies[index],), 
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      
+
+
+                    ],
+                  ),
                 ),
               )
             );
