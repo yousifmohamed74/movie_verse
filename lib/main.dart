@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:movie_verse/core/Api/dio_factory.dart';
+import 'package:movie_verse/core/styles/theme_data.dart';
+import 'package:movie_verse/features/splash%20screen/ui/splash_screen.dart';
 
 void main() {
+  DioFactory.init();
   runApp(const MyApp());
 }
 
@@ -10,12 +14,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      
-      theme: ThemeData(        
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: Center(child: Container()),
+    return MaterialApp(    
+      debugShowCheckedModeBanner: false,  
+      theme: Themedata.semidarktheme,
+      home: SplashScreen(),
     );
   }
 }
