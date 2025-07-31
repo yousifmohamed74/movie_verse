@@ -38,7 +38,7 @@ class SearchScreen extends StatelessWidget {
                     child: Column(
                       spacing: 20,
                       children: [
-                        
+
                         //1
                         Container(
                           padding: EdgeInsets.all(10),
@@ -56,15 +56,18 @@ class SearchScreen extends StatelessWidget {
                                   controller: provider.searchcontroller,
                                   cursorColor: Colors.white,
                                   cursorHeight: 30,
-                                  decoration: InputDecoration(
-                                    
+                                  decoration: InputDecoration(                                   
+                                   hintStyle: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w300,
+                                   ),
+                                   hintText: "Enter Movie Title To Search",
+                                   
                                   ),                                  
                                   onChanged: (value) {                                    
-                                    provider.getSearchedMovies();
-                                    print(provider.searchedmovies.length);
-                                    print(provider.searchcontroller.text);
-                                    print(value);
+                                    provider.getSearchedMovies();                                    
                                   },
+                                  
                                   
                                 ),
                               ),                    

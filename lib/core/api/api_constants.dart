@@ -8,6 +8,6 @@ class ApiConstants {
   static const String toprated = '/movie/top_rated';
   static const String upcoming = "/movie/upcoming";  
   static const String genres ="/genre/movie/list";
-  static const String searchmovies2 ="/search/movie";
+  static const String searchmovies ="/search/movie";
 
 }
