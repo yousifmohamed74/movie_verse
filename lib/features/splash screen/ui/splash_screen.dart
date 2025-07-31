@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 width: 150,
                 height: 160,
               ),
-              Text("Movie Verse",style: TextStyle(
+              Text("MovieVerse",style: TextStyle(
                 fontSize: 34,
                 fontWeight: FontWeight.bold,                
               ),)

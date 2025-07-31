@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
                   width: 30,
                   height: 30,
                 ),
-                Text("Movie Verse",style: TextStyle(
+                Text("MovieVerse",style: TextStyle(
                   fontSize: 29,
                   fontWeight: FontWeight.bold
                 ),), 
