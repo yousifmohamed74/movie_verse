@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:movie_verse/features/home%20screen/logic/homescreen_provider.dart';
 import 'package:movie_verse/features/home%20screen/ui/widgets/movie_shape1_wid.dart';
@@ -11,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => HomescreenProvider()..getTrendingMovies()..getNowPlayingMovies()..getTopRatedMovies() ..getUpcomingMovies(),
+      create: (context) => HomescreenProvider()..getTrendingMovies()..getNowPlayingMovies()..getTopRatedMovies()..getUpcomingMovies(),
       
       
      
@@ -31,26 +32,47 @@ class HomeScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold
               ),), 
             ],
-          ),
-          //centerTitle: true,
+          ),          
           actions: [
-            IconButton(
-              onPressed: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder:(context) => SearchScreen(),                   
-                  )
-                );               
-              }, 
-              icon: Icon(Icons.search,size: 30,))
+            Row(
+              children: [
+                ///////////////////////////////////////////////////
+                Consumer<HomescreenProvider>(
+                  builder: (context,val,child) {
+                    //var provider=context.read<HomescreenProvider>();
+                    return IconButton(
+                      onPressed: (){                      
+                                                
+                      }, 
+                      icon:false?
+                       Icon(Icons.dark_mode,size: 30,):
+                       Icon(Icons.light_mode_outlined,size: 30,)
+                    );
+                  }
+                ),
+////////////////////////////////////////////////////////////////////////////
+
+                IconButton(
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder:(context) => SearchScreen(),                   
+                      )
+                    );               
+                  }, 
+                  icon: Icon(Icons.search,size: 33,)
+                ),
+
+              ],
+            ),
+            
           ],
         ), 
 
         body: Consumer<HomescreenProvider>(
           builder: (context,child,val) {
-            var provider=context.read<HomescreenProvider>();
-            //var provider=val;
+            var provider=context.read<HomescreenProvider>();            
             return SafeArea(
               child: Padding(
                 padding: const EdgeInsets.only(left: 10,top: 15),
@@ -183,12 +205,15 @@ class HomeScreen extends StatelessWidget {
                               ),),
                             ],
                           ),                        
-                          ListView.separated(                             
-                            physics: NeverScrollableScrollPhysics(),
-                            shrinkWrap: true,                      
-                            separatorBuilder: (context, index) => SizedBox(height: 12,), 
-                            itemCount: provider.upcomingmovies.length,
-                            itemBuilder: (context, index) =>MovieShape2Wid(movie: provider.upcomingmovies[index],), 
+                          Padding(
+                            padding: const EdgeInsets.only(right: 4.5),
+                            child: ListView.separated(                             
+                              physics: NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,                      
+                              separatorBuilder: (context, index) => SizedBox(height: 12,), 
+                              itemCount: provider.upcomingmovies.length,
+                              itemBuilder: (context, index) =>MovieShape2Wid(movie: provider.upcomingmovies[index],), 
+                            ),
                           ),
                         ],
                       ),

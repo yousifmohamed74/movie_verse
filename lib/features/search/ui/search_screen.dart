@@ -33,7 +33,7 @@ class SearchScreen extends StatelessWidget {
               var provider=context.read<SearchScreenProvider>();
               return SafeArea(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(11),
                   child: SingleChildScrollView(
                     child: Column(
                       spacing: 20,
@@ -81,7 +81,7 @@ class SearchScreen extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           child: SizedBox(
                             height: 550,                            
-                            child: Center(child: Text("Search Result Appear Here !",
+                            child: Center(child: Text("Search Result Appear\n Here !",
                               maxLines: 2,
                               textAlign:TextAlign.center ,
                               style: TextStyle(

@@ -5,6 +5,7 @@ import 'package:movie_verse/core/api/dio_factory.dart';
 import 'package:movie_verse/features/home%20screen/models/movie_responses_model.dart';
 
 
+
 class HomescreenProvider extends ChangeNotifier{
   
   final List <MovieModel> trendingmovies=[];
@@ -76,4 +77,7 @@ class HomescreenProvider extends ChangeNotifier{
       log(e.toString());
     }   
   }
+
+
+
 }
