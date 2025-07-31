@@ -1,13 +1,12 @@
 import 'package:dio/dio.dart';
 import 'package:movie_verse/core/Api/api_constants.dart';
 
-class DioFactory {  
-
-   static Dio dio = Dio(
-      BaseOptions(
-        baseUrl: ApiConstants.baseUrl,        
-      ),
-    );
+class DioFactory {   
+  static Dio dio = Dio(
+    BaseOptions(
+      baseUrl: ApiConstants.baseUrl,        
+    ),
+  );
 
   static Future<Response> getData({    
     required String path,    

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_verse/core/api/dio_factory.dart';
 import 'package:movie_verse/core/shared%20prefrances/sharedprefrances.dart';
 import 'package:movie_verse/core/styles/theme_data.dart';
 import 'package:movie_verse/features/splash%20screen/ui/splash_screen.dart';
@@ -6,7 +7,7 @@ import 'package:movie_verse/features/splash%20screen/ui/splash_screen.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();  
-  await SharedPreferencesitem.init();  
+  await SharedPreferencesitem.init(); 
   runApp(const MyApp());
 }
 
