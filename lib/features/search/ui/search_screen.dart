@@ -38,6 +38,7 @@ class SearchScreen extends StatelessWidget {
                     child: Column(
                       spacing: 20,
                       children: [
+                        
                         //1
                         Container(
                           padding: EdgeInsets.all(10),
