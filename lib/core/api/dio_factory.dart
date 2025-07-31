@@ -21,33 +21,19 @@ class DioFactory {
     return response;
   }
 
-  // static Future<Response> getMovieDetailsWithId({
-  //   int ? id,
-  //   required String path,
-  //   String? token,
-  // }) async {
-  //   final response = await dio.get(
-  //     "${path}movie_id$id",      
-  //     options: Options(headers: {
-  //       'Authorization': 'Bearer $token',
-  //     }),
-  //   );
-  //   return response;
-  // }
-
-  // static Future<Response> getMovieWithTitle({
-  //   String ? title,
-  //   required String path,
-  //   String? token,
-  // }) async {
-  //   final response = await dio.get(
-  //     path,
-  //     queryParameters: {"query":title},      
-  //     options: Options(headers: {
-  //       'Authorization': 'Bearer $token',
-  //     }),
-  //   );
-  //   return response;
-  // }
+  static Future<Response> getMoviesBySearch({
+    required String  title,
+    required String path,
+    String? token,
+  }) async {
+    final response = await dio.get(
+      path,
+      queryParameters: {"query":title},            
+      options: Options(headers: {
+        'Authorization': 'Bearer ${ApiConstants.apikey}',
+      }),
+    );
+    return response;
+  }
   
 }

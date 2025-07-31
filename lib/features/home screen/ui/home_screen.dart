@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_verse/features/home%20screen/logic/homescreen_provider.dart';
 import 'package:movie_verse/features/home%20screen/ui/widgets/movie_shape1_wid.dart';
 import 'package:movie_verse/features/home%20screen/ui/widgets/movie_shape2_wid.dart';
+import 'package:movie_verse/features/search/ui/search_screen.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -35,7 +36,12 @@ class HomeScreen extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: (){
-               
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:(context) => SearchScreen(),                   
+                  )
+                );               
               }, 
               icon: Icon(Icons.search,size: 30,))
           ],

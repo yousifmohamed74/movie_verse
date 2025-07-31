@@ -6,8 +6,8 @@ class ApiConstants {
   static const String trending = "/trending/movie/day";
   static const String nowplaying = '/movie/now_playing';
   static const String toprated = '/movie/top_rated';
-  static const String upcoming = "/movie/upcoming";
-  static const String movisearch = "/movie/";
-  
+  static const String upcoming = "/movie/upcoming";  
+  static const String genres ="/genre/movie/list";
+  static const String searchmovies ="/search/movie";
 
 }
