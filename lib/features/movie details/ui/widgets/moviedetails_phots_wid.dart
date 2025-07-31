@@ -20,13 +20,13 @@ class MoviedetailsPhotsWid extends StatelessWidget {
           ),
           child: CachedNetworkImage(
             imageUrl:ApiConstants.imagebaseUrl+movie.backdroppath,
-            height: 180, 
+            height: 210, 
             width: double.infinity,   
             fit: BoxFit.fill,        
           ),
         ),
         Positioned(                          
-          bottom: -40,
+          bottom: -50,
           left: 25,
           child: Container(
             clipBehavior: Clip.antiAlias,
@@ -35,8 +35,8 @@ class MoviedetailsPhotsWid extends StatelessWidget {
             ),
             child: CachedNetworkImage(
               imageUrl:ApiConstants.imagebaseUrl+movie.posterpath,
-              height: 120, 
-              width: 150,   
+              height: 140, 
+              width: 140,   
               fit: BoxFit.fill,        
             ),
           ),
