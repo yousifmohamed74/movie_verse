@@ -195,7 +195,7 @@ class HomeScreen extends StatelessWidget {
                               ],
                             ),                        
                             Padding(
-                              padding: const EdgeInsets.only(right: 6),
+                              padding: const EdgeInsets.only(right: 10),
                               child: ListView.separated(                             
                                 physics: NeverScrollableScrollPhysics(),
                                 shrinkWrap: true,                      

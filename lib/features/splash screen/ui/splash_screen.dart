@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();    
-    Future.delayed(Duration(seconds: 3)).then((value) {      
+    Future.delayed(Duration(seconds: 1)).then((value) {
       Navigator.pushAndRemoveUntil(
         // ignore: use_build_context_synchronously
         context,
