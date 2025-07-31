@@ -19,7 +19,9 @@ class MoviedetailsPhotsWid extends StatelessWidget {
             borderRadius: BorderRadius.only(bottomLeft:Radius.circular(15),bottomRight: Radius.circular(15)),
           ),
           child: CachedNetworkImage(
-            imageUrl:ApiConstants.imagebaseUrl+movie.backdroppath,
+            imageUrl:movie.backdroppath.isNotEmpty?
+              ApiConstants.imagebaseUrl+movie.backdroppath:
+              'https://upload.wikimedia.org/wikipedia/en/e/e0/The_Amazing_Spider-Man_%28film%29_poster.jpg',            
             height: 210, 
             width: double.infinity,   
             fit: BoxFit.fill,        
@@ -34,7 +36,9 @@ class MoviedetailsPhotsWid extends StatelessWidget {
               borderRadius: BorderRadius.circular(15)
             ),
             child: CachedNetworkImage(
-              imageUrl:ApiConstants.imagebaseUrl+movie.posterpath,
+              imageUrl:movie.posterpath.isNotEmpty?
+                ApiConstants.imagebaseUrl+movie.posterpath:
+                'https://upload.wikimedia.org/wikipedia/en/e/e0/The_Amazing_Spider-Man_%28film%29_poster.jpg',
               height: 140, 
               width: 140,   
               fit: BoxFit.fill,        
