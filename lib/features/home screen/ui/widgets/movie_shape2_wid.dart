@@ -32,7 +32,9 @@ class MovieShape2Wid extends StatelessWidget {
             spacing: 15,
             children: [
               CachedNetworkImage(
-                imageUrl:ApiConstants.imagebaseUrl+movie.posterpath,
+                imageUrl:movie.posterpath.isNotEmpty?
+                ApiConstants.imagebaseUrl+movie.posterpath:
+                'https://upload.wikimedia.org/wikipedia/en/e/e0/The_Amazing_Spider-Man_%28film%29_poster.jpg',
                 height: double.infinity, 
                 width: 135,   
                 fit: BoxFit.fill,        

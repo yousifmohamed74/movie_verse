@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_verse/core/api/api_constants.dart';
 import 'package:movie_verse/core/api/dio_factory.dart';
 import 'package:movie_verse/features/home%20screen/models/movie_responses_model.dart';
+import 'package:movie_verse/features/search/models/search_response_model.dart';
 
 class HomescreenProvider extends ChangeNotifier{
   
@@ -76,6 +77,4 @@ class HomescreenProvider extends ChangeNotifier{
       log(e.toString());
     }   
   }
-
-
 }
