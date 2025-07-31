@@ -111,22 +111,6 @@ class MovieModel{
      this.votecount,
   );
 
-  // factory MovieModel.fromJson(Map<String, dynamic> json) => MovieModel(
-  //   json["adult"],
-  //   json["backdrop_path"],
-  //   json["genre_ids"],
-  //   json["id"],
-  //   json["original_language"],
-  //   json["original_title"],
-  //   json["overview"],
-  //   json["popularity"].toDouble(),
-  //   json["poster_path"],
-  //   json["release_date"],
-  //   json["title"],
-  //   json["video"],
-  //   json["vote_average"].toDouble(),
-  //   json["vote_count"],
-  // );
 
   factory MovieModel.fromJson(Map<String, dynamic> json) => MovieModel(
     json["adult"] ?? false,

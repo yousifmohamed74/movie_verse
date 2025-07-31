@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:movie_verse/core/shared%20prefrances/sharedprefrances.dart';
 import 'package:movie_verse/core/styles/theme_data.dart';
