@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:movie_verse/core/api/api_constants.dart';
 import 'package:movie_verse/core/api/dio_factory.dart';
+import 'package:movie_verse/core/shared%20prefrances/sharedprefrances.dart';
 import 'package:movie_verse/features/home%20screen/models/movie_responses_model.dart';
 
 
@@ -78,6 +79,11 @@ class HomescreenProvider extends ChangeNotifier{
     }   
   }
 
-
+  bool iSDARK=false;
+  void changeDarkMode()async{
+    iSDARK=!iSDARK;
+    await SharedPreferencesitem.setBool("isdark",iSDARK);
+    notifyListeners();
+  } 
 
 }
