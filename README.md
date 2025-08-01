@@ -1,6 +1,6 @@
 # movie_verse
 
-A new Flutter project.
+MovieVers is a new Flutter  Application To ITI Summer Cousrse Graduation Project 
 
 ## Getting Started
 
