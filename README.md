@@ -1,16 +1,10 @@
 # movie_verse
 
-A new Flutter project.
+MovieVers is My new Flutter Application To ITI Summer Training Graduation Project 
 
-## Getting Started
+# Apk
 
-This project is a starting point for a Flutter application.
+Apk Link : https://drive.google.com/file/d/11vtHx4TO6W2MBoQgN2SCQ7jtZMRQB3D9/view?usp=drive_link
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
