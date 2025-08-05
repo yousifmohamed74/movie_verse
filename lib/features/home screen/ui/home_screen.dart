@@ -119,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                                   ],
                                 ),
                                 Text(                          
-                                  "From  (${provider.nowplayingmoviesdates["minimum"]}) To  (${provider.nowplayingmoviesdates["maximum"]})",
+                                  "From  (${provider.nowplayingmoviesdates["minimum"]??"Empty"}) To  (${provider.nowplayingmoviesdates["maximum"]??"Empty"})",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w300
@@ -187,7 +187,7 @@ class HomeScreen extends StatelessWidget {
                                   ],
                                 ),
                                 Text(                          
-                                  "From  (${provider.upcomingmoviesdates["minimum"]}) To  (${provider.upcomingmoviesdates["maximum"]})",
+                                  "From  (${provider.upcomingmoviesdates["minimum"]??"Empty"}) To  (${provider.upcomingmoviesdates["maximum"]??"Empty"})",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w300
